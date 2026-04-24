@@ -1,6 +1,7 @@
 <script setup>
 import{ref} from'vue'
 import ProdutoChild from './components/ProdutoChild.vue';
+import ButtonChild from './components/icons/ButtonChild.vue';
 const produtos = ref([
   { id: 1, nome: 'Ração Premium Cães', preco: 120, categoria: 'Alimentos' },
   { id: 2, nome: 'Ração Gatos Castrados', preco: 95, categoria: 'Alimentos' },
@@ -21,6 +22,10 @@ const produtos = ref([
 
 </ProdutoChild>
     </ul>
+    <div v-show="true">
+<input type="number" v-model="preco">
+<ButtonChild @clique="corrigirPreco">Salvar</ButtonChild>
+    </div>
   </div>
 </template>
 
