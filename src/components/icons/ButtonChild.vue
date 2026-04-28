@@ -4,7 +4,7 @@ defineEmits(['clique'])
 <template>
   <button @click.prevent="$emit('clique')">
 <slot>
-  
+
 </slot>
   </button>
 </template>
