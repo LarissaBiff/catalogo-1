@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import ProdutoChild from './components/ProdutoChild.vue';
-import ButtonChild from './components/icons/ButtonChild.vue';
+import ButtonChild from './components/ButtonChild.vue';
 
 
 const produtos = ref([

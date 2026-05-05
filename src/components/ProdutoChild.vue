@@ -1,13 +1,14 @@
 <script setup>
-import ButtonChild from './icons/ButtonChild.vue';
+import ButtonChild from './ButtonChild.vue';
 defineProps(['id', 'nome', 'preco', 'categoria'])
 defineEmits(['corrigirpreco'])
+import { formataPreco } from '@/utils/produtosUtils';
 
 </script>
 
 <template>
   <li>
-    ID: {{ id }} - {{ nome }} -- R$ {{ preco }} ({{ categoria }})
+    ID: {{ id }} - {{ nome }} - {{ formataPreco(preco) }} ({{ categoria }})
     <ButtonChild @clique="$emit('corrigirpreco', id)">Corrigir Preço</ButtonChild>
   </li>
 </template>
