@@ -1,1 +1,1 @@
-import{createRouter, createWebHistory}
+import { createRouter, createWebHistory } from "vue-router";
