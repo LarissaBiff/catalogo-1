@@ -10,6 +10,9 @@ import AlimentosViews from "@/views/alimentosViews.vue";
 const routes = [
     {path: '/', component: HomeView},
     {path: '/alimentos', component: AlimentosViews},
+    {path: '/brinquedos', component: BrinquedosViews},
+    {path: '/Higiene', component: HigieneViews}
+
 ]
 
 const router = createRouter({
