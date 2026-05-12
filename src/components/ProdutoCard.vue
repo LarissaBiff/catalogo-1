@@ -1,4 +1,5 @@
 <script setup>
+import ProdutoDialog from './ProdutoDialog.vue';
     defineProps((['id', 'nome', 'preco', 'imagem', 'categoria']))
     import ButtonChild from './ButtonChild.vue';
     import { formataPreco } from '@/utils/produtosUtils';
@@ -17,6 +18,7 @@
             <img :src="imagem" :alt="nome" class="produto-image">
         </div>
         <ButtonChild>Editar</ButtonChild>
+        <ProdutoDialog :nome="nome" :id="id" :categoria="categoria" :preco="preco"></ProdutoDialog>
     </div>
 </template>
 <style scoped>
