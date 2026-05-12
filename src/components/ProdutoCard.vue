@@ -24,6 +24,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    border: 1px solid #c797e3;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.produto-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 </style>
