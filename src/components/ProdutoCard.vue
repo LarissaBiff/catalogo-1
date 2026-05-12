@@ -14,10 +14,16 @@
             </p>
         </div>
         <div>
-            <img :src="imagem" :alt="nome">
+            <img :src="imagem" :alt="nome" class="produto-image">
         </div>
+        <ButtonChild>Editar</ButtonChild>
     </div>
 </template>
 <style scoped>
-
+.produto-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
 </style>
