@@ -1,9 +1,12 @@
 <script setup>
-import ProdutoDialog from './ProdutoDialog.vue';
+    import { ref } from 'vue';
+    import ProdutoDialog from './ProdutoDialog.vue';
     defineProps((['id', 'nome', 'preco', 'imagem', 'categoria']))
     import ButtonChild from './ButtonChild.vue';
     import { formataPreco } from '@/utils/produtosUtils';
+    const mostrarDialog = ref(false)
 </script>
+
 <template>
     <div class="produto-card">
         <div>
@@ -17,10 +20,11 @@ import ProdutoDialog from './ProdutoDialog.vue';
         <div>
             <img :src="imagem" :alt="nome" class="produto-image">
         </div>
-        <ButtonChild>Editar</ButtonChild>
-        <ProdutoDialog :nome="nome" :id="id" :categoria="categoria" :preco="preco"></ProdutoDialog>
+        <ButtonChild @clique="mostrarDialog = true">Editar</ButtonChild>
+        <ProdutoDialog v-if="mostrarDialog" :nome="nome" :id="id" :categoria="categoria" :preco="preco" @fechar="mostrarDialog = false"></ProdutoDialog>
     </div>
 </template>
+
 <style scoped>
 .produto-card {
     display: flex;
@@ -29,6 +33,7 @@ import ProdutoDialog from './ProdutoDialog.vue';
     border: 1px solid #c797e3;
     padding: 16px;
     margin-bottom: 16px;
+    color:black;
 }
 .produto-image {
     width: 100px;

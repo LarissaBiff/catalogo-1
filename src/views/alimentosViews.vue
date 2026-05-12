@@ -14,12 +14,10 @@ produtos.value = produtos.value.filter(produto => produto.categoria === 'Aliment
 <div class="container">
 
     <h1>Alimentos</h1>
-
     <div class="produtos">
-        <ProdutoCard v-for="produto in produtos" :key="produto.id" :id="produto.id" :nome="produto.nome" :preco="produto.preco" :categoria="produto.categoria" :imagem="produto.imagem">
-
+        <ProdutoCard v-for="produto in produtos" :key="produto.id" :id="produto.id" :nome="produto.nome" :imagem="produto.imagem" :preco="produto.preco"
+            :categoria="produto.categoria">
         </ProdutoCard>
-
     </div>
 
 </div>

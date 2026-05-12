@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import AcessoriosViews from "@/views/AcessoriosViews.vue";
 import HigieneViews from "@/views/HigieneViews.vue";
 import BrinquedosViews from "@/views/BrinquedosViews.vue";
-import alimentosViews from "@/views/alimentosViews.vue";
 import HomeView from "@/views/HomeView.vue";
 import AlimentosViews from "@/views/alimentosViews.vue";
 

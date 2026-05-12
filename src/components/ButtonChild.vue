@@ -1,6 +1,7 @@
 <script setup>
 defineEmits(['clique'])
 </script>
+
 <template>
   <button @click.prevent="$emit('clique')">
 <slot>
@@ -8,5 +9,6 @@ defineEmits(['clique'])
 </slot>
   </button>
 </template>
+
 <style scoped></style>
 
